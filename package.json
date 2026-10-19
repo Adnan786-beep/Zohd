@@ -1,0 +1,15 @@
+{
+  "name": "zohd-storefront",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "vercel:dev": "npx vercel dev"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}

@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "name": "ZOHD Bamboo Toothbrush for Kids Pack of 2 | Soft Bristles | Eco-Friendly Wooden Toothbrush | Natural Bamboo Handle | Plastic-Free Kids Oral Care",
+    "category": "Kids Oral Care",
+    "price": 123,
+    "mrp": 144,
+    "variants": [
+      "Pack of 2 (Pink & Blue)"
+    ],
+    "image": "/images/products/kids-bamboo-toothbrush-lifestyle.png",
+    "images": [
+      "/images/products/kids-bamboo-toothbrush-lifestyle.png",
+      "/images/products/kids-bamboo-toothbrush-set.png",
+      "/images/products/kids-bamboo-toothbrush-front.png",
+      "/images/products/kids-bamboo-toothbrush-size-guide.png",
+      "/images/products/zohd-oral-care-kit.png"
+    ],
+    "description": "Make brushing fun and eco-friendly with the ZOHD Bamboo Toothbrush Combo for Kids. Designed specifically for children's delicate teeth and gums, these toothbrushes feature ultra-soft BPA-free bristles that provide gentle yet effective cleaning. The smooth, lightweight bamboo handle is easy for little hands to hold and is made from responsibly sourced natural bamboo, offering a sustainable alternative to plastic toothbrushes.\nPerfect for daily oral care, these biodegradable bamboo toothbrushes help reduce plastic waste while encouraging healthy brushing habits from an early age. The ergonomic design ensures comfort and better grip, making brushing enjoyable for kids.",
+    "stock": "In Stock"
+  },
+  {
+    "id": 2,
+    "name": "ZOHD Family Bamboo Toothbrush Combo Pack | 2 Adult & 2 Kids Toothbrushes | Soft Bristles | Eco-Friendly Bamboo Toothbrush | Sustainable Oral Care Kit",
+    "category": "Family Oral Care",
+    "price": 183,
+    "mrp": 288,
+    "variants": [
+      "Family Pack (2 Adult + 2 Kids)"
+    ],
+    "image": "/images/products/family-bamboo-toothbrush-lifestyle.png",
+    "images": [
+      "/images/products/family-bamboo-toothbrush-lifestyle.png",
+      "/images/products/family-bamboo-toothbrush-set.png",
+      "/images/products/family-bamboo-toothbrush-tray.png",
+      "/images/products/family-bamboo-toothbrush-size-guide.png",
+      "/images/products/family-bamboo-toothbrush-kit.png"
+    ],
+    "description": "Take care of your family's oral health while protecting the environment with the ZOHD Family Bamboo Toothbrush Combo. This pack includes two adult bamboo toothbrushes and two kids bamboo toothbrushes, making it the perfect sustainable solution for family oral care.\nThe adult toothbrushes feature soft BPA-free bristles for effective plaque removal, while the kids' brushes are specially designed with extra-soft bristles for delicate gums. Crafted from natural bamboo, these biodegradable toothbrushes help reduce plastic waste without compromising on comfort or performance.\nIdeal for families looking to switch to eco-friendly daily essentials.",
+    "stock": "In Stock"
+  },
+  {
+    "id": 3,
+    "name": "Adult Neem Toothbrush",
+    "category": "Adult Oral Care",
+    "price": 149,
+    "mrp": 149,
+    "variants": [
+      "Single toothbrush"
+    ],
+    "image": "/images/adult-toothbrush.jpg",
+    "images": [
+      "/images/adult-toothbrush.jpg"
+    ],
+    "description": "Hand-finished neem wood handle with soft, biodegradable bristles. Naturally antibacterial, gentle on gums, and fully compostable at the end of its life.",
+    "stock": "In Stock"
+  },
+  {
+    "id": 4,
+    "name": "Kids Neem Toothbrush",
+    "category": "Kids Oral Care",
+    "price": 129,
+    "mrp": 129,
+    "variants": [
+      "Single toothbrush"
+    ],
+    "image": "/images/kids-toothbrush.jpg",
+    "images": [
+      "/images/kids-toothbrush.jpg"
+    ],
+    "description": "A smaller, softer neem toothbrush sized for little hands and growing teeth. A gentle option for everyday brushing.",
+    "stock": "In Stock"
+  },
+  {
+    "id": 5,
+    "name": "Neem Toothbrush + Tongue Cleaner Combo",
+    "category": "Oral Care Bundle",
+    "price": 199,
+    "mrp": 248,
+    "variants": [
+      "Toothbrush + tongue cleaner"
+    ],
+    "image": "/images/neem-combo.jpg",
+    "images": [
+      "/images/neem-combo.jpg"
+    ],
+    "description": "A neem toothbrush and tongue cleaner set for a complete everyday oral-care routine.",
+    "stock": "In Stock"
+  },
+  {
+    "id": 6,
+    "name": "Eco-Friendly Seed Notebook",
+    "category": "Lifestyle",
+    "price": 249,
+    "mrp": 249,
+    "variants": [
+      "Single notebook"
+    ],
+    "image": "/images/eco-notebook.jpg",
+    "images": [
+      "/images/eco-notebook.jpg"
+    ],
+    "description": "A seed notebook for everyday notes and a more conscious desk.",
+    "stock": "In Stock"
+  }
+]

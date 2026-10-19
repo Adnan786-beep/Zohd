@@ -1,0 +1,12 @@
+[
+  {
+    "id": "c146a146-8c9d-4a93-98f9-42ca64062217",
+    "name": "Nafisa Mukadam",
+    "identifier": "zakiinitiatives@gmail.com",
+    "address": "Burhani park",
+    "location": "mumbai",
+    "salt": "8401623693eb722f46a7f9830515f91f",
+    "passwordHash": "d8613fdee7f9add8b9c9338da95535ad3291da8b15fdc5c7648bd0a44345a32fbc056b50611fc27c7c1efe226f3b31edb7bfe5a0e36fdb8422bbcd73ee079248",
+    "createdAt": "2026-10-18T16:01:50.698Z"
+  }
+]

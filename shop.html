@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop - ZOHD</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ZOHD home">
+        <img src="/images/zohd-mark.png" alt="ZOHD logo mark" class="brand-logo-image" />
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="active">Shop Catalog</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" onclick="openAuthModal()"><i class="fa-regular fa-user"></i> <span id="user-display-name">Login</span></button>
+        <button class="icon-btn cart-btn" onclick="toggleCart()"><i class="fa-solid fa-bag-shopping"></i> <span class="cart-badge" id="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <h2 style="margin-bottom:1.5rem;">Natural Oral Care Products</h2>
+    <div class="product-grid" id="shop-catalog-container"></div>
+  </main>
+
+  <div id="product-detail-modal" class="product-detail-overlay" onclick="if(event.target === this) closeProductDetails()" aria-hidden="true">
+    <section class="product-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="product-detail-heading">
+      <button type="button" class="product-detail-close" onclick="closeProductDetails()" aria-label="Close product details">&times;</button>
+      <div class="product-detail-content"></div>
+    </section>
+  </div>
+
+  <!-- INCLUDE SHOPPING BAG DRAWER & AUTH MODAL IN ALL PAGES -->
+  <div id="cart-overlay" class="cart-overlay" onclick="toggleCart(false)"></div>
+  <div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping"></i> Shopping Bag</h3>
+      <button class="close-drawer-btn" onclick="toggleCart(false)">&times;</button>
+    </div>
+    <div class="cart-items-body" id="cart-items-container"></div>
+    <div class="cart-footer">
+      <div class="cart-summary-row"><span>Subtotal:</span><span id="cart-subtotal">₹0</span></div>
+      <button class="btn btn-whatsapp full-width" onclick="checkoutViaWhatsApp()"><i class="fa-brands fa-whatsapp"></i> Place Order on WhatsApp</button>
+    </div>
+  </div>
+
+  <a href="https://wa.me/918655903153" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" aria-label="Contact ZOHD on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZOHD - House of Sustainables | Eco-Friendly Oral Care</title>
+  <meta name="description" content="Explore bamboo and neem toothbrushes for kids, adults, and families, plus a neem tongue-cleaner set and everyday essentials from ZOHD." />
+  
+  <!-- Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+  <div id="page-loader" class="page-loader" aria-live="polite" aria-label="Loading website">
+    <div class="loader-content">
+      <img src="images/zohd-mark.png" alt="ZOHD logo" class="loader-logo" />
+      <div class="loader-spinner"></div>
+    </div>
+  </div>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <i class="fa-solid fa-leaf"></i> NATURAL ORAL CARE &amp; EVERYDAY ESSENTIALS <span aria-hidden="true">·</span> FREE SHIPPING ABOVE ₹499 <span aria-hidden="true">·</span> CASH ON DELIVERY <span aria-hidden="true">·</span> DISPATCH WITHIN 48 HOURS
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a class="brand-logo" onclick="showSection('home-section')" aria-label="ZOHD home">
+        <img src="images/zohd-mark.png" alt="ZOHD logo mark" class="brand-logo-image" />
+        <span class="brand-logo-text" aria-hidden="true">ZOHD</span>
+      </a>
+
+      <nav class="nav-links">
+        <a id="nav-home" class="active" onclick="showSection('home-section')">Home</a>
+        <a id="nav-shop" onclick="showSection('shop-section')">Shop Catalog</a>
+        <a onclick="showMaterialsComparison()">Our Materials</a>
+        <a id="nav-about" onclick="showSection('about-section')">About Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn search-btn" type="button" onclick="openProductSearch()" aria-label="Search products">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+        <button class="icon-btn" onclick="openAuthModal()">
+          <i class="fa-regular fa-user"></i> <span id="user-display-name">Login / Register</span>
+        </button>
+        <button class="icon-btn cart-btn" onclick="toggleCart(true)">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOME SECTION -->
+  <section id="home-section" class="page-section active">
+    <div class="hero-banner">
+      <div class="hero-content">
+        <span class="badge-pill">ZOHD · House of Sustainables</span>
+        <h1>A thoughtful brush for every smile.</h1>
+        <p>Explore bamboo and neem toothbrushes for kids and families, plus thoughtful essentials for everyday routines.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="showSection('shop-section')">Shop the collection <i class="fa-solid fa-arrow-right"></i></button>
+          <button class="btn btn-outline" onclick="showSection('about-section')">Get to know ZOHD</button>
+        </div>
+      </div>
+      <div class="hero-product">
+        <span class="hero-product-note"><i class="fa-solid fa-house"></i> The family combo</span>
+        <img src="images/products/family-bamboo-toothbrush-lifestyle.png" alt="ZOHD Family Bamboo Toothbrush Combo with two adult and two kids toothbrushes" />
+        <span class="hero-product-price">Family pack <strong>₹183</strong> <del>₹288</del></span>
+      </div>
+    </div>
+
+    <div class="home-collection-heading">
+      <div>
+        <span class="home-eyebrow">The current collection</span>
+        <h2>Find your everyday essential.</h2>
+        <p>Explore oral care and lifestyle products from the ZOHD collection.</p>
+      </div>
+      <button class="btn btn-outline" onclick="showSection('shop-section')">View all products <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    <div class="product-grid home-product-grid" id="home-product-grid"></div>
+
+    <div class="home-benefits" aria-label="About the toothbrush collection">
+      <article class="home-benefit">
+        <span class="home-benefit-icon"><i class="fa-solid fa-leaf"></i></span>
+        <div><h2>Natural handle options</h2><p>Choose toothbrushes made with bamboo or neem wood handles.</p></div>
+      </article>
+      <article class="home-benefit">
+        <span class="home-benefit-icon"><i class="fa-solid fa-tooth"></i></span>
+        <div><h2>Soft bristles</h2><p>Soft for adults and extra-soft for kids’ delicate gums.</p></div>
+      </article>
+      <article class="home-benefit">
+        <span class="home-benefit-icon"><i class="fa-solid fa-people-roof"></i></span>
+        <div><h2>For different routines</h2><p>Browse kids’ and family packs, adult brushes, and everyday extras.</p></div>
+      </article>
+    </div>
+
+    <section class="materials-comparison" id="materials-comparison" aria-labelledby="materials-heading">
+      <div class="materials-heading">
+        <span class="home-eyebrow">A more mindful everyday choice</span>
+        <h2 id="materials-heading">Explore natural handle options.</h2>
+        <p>Compare the materials in our current collection and choose what fits your routine.</p>
+      </div>
+      <div class="materials-grid">
+        <article class="material-card">
+          <span class="material-icon"><i class="fa-solid fa-seedling"></i></span>
+          <h3>Bamboo toothbrushes</h3>
+          <p>Our bamboo range includes a kids’ pack and a family combo, with soft bristles for everyday brushing.</p>
+          <button class="material-link" type="button" onclick="openProductSearch('bamboo')">Shop bamboo options <i class="fa-solid fa-arrow-right"></i></button>
+        </article>
+        <article class="material-card">
+          <span class="material-icon"><i class="fa-solid fa-leaf"></i></span>
+          <h3>Neem oral care</h3>
+          <p>Explore neem toothbrushes for adults and kids, a toothbrush and tongue-cleaner combo, and a seed notebook.</p>
+          <button class="material-link" type="button" onclick="openProductSearch('neem')">Shop neem options <i class="fa-solid fa-arrow-right"></i></button>
+        </article>
+        <article class="material-card material-card-note">
+          <span class="material-icon"><i class="fa-solid fa-recycle"></i></span>
+          <h3>Find your everyday essentials</h3>
+          <p>See product details for pack contents, materials, and care information before choosing.</p>
+          <button class="material-link" type="button" onclick="showSection('shop-section')">Browse the collection <i class="fa-solid fa-arrow-right"></i></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="home-faq" aria-labelledby="home-faq-heading">
+      <div class="home-faq-heading">
+        <span class="home-eyebrow">Good to know</span>
+        <h2 id="home-faq-heading">A few helpful details.</h2>
+        <p>What comes in each pack, how ordering works, and where to ask about delivery.</p>
+      </div>
+      <div class="home-faq-list">
+        <details class="home-faq-item">
+          <summary>What comes in each toothbrush pack?</summary>
+          <div class="home-faq-answer">
+            <p>The bamboo kids’ pack includes two toothbrushes (pink and blue), and the family combo includes two adult and two kids’ brushes. The neem range includes adult and kids’ toothbrushes and a toothbrush with a tongue cleaner. Open a product to see its photos and full details.</p>
+          </div>
+        </details>
+        <details class="home-faq-item">
+          <summary>How should I care for a natural-handle toothbrush?</summary>
+          <div class="home-faq-answer">
+            <p>Rinse the bristles after brushing, shake off excess water, and store the toothbrush upright in a well-aerated holder. Avoid leaving the wooden handle sitting in water.</p>
+          </div>
+        </details>
+        <details class="home-faq-item">
+          <summary>How do I place an order?</summary>
+          <div class="home-faq-answer">
+            <p>Add your chosen product to the bag, then check out through WhatsApp. Sign in with your saved delivery address and location so they’re included in the order message. Review the message and send it to ZOHD to confirm your order details.</p>
+          </div>
+        </details>
+        <details class="home-faq-item">
+          <summary>What are the delivery options and dispatch times?</summary>
+          <div class="home-faq-answer">
+            <p>Shipping is free on orders above ₹499, and orders are dispatched within 48 hours. Cash on delivery is available. Contact ZOHD through the WhatsApp help button to confirm delivery availability and details for your location.</p>
+          </div>
+        </details>
+        <details class="home-faq-item">
+          <summary>Have a question about a product?</summary>
+          <div class="home-faq-answer">
+            <p>Message ZOHD using the WhatsApp help button, or follow <a href="https://www.instagram.com/zohd_hos/" target="_blank" rel="noopener noreferrer">@zohd_hos on Instagram</a>.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="newsletter-section" aria-labelledby="newsletter-heading">
+      <div class="newsletter-copy">
+        <span class="newsletter-icon"><i class="fa-regular fa-envelope"></i></span>
+        <div>
+          <span class="home-eyebrow">Stay in the loop</span>
+          <h2 id="newsletter-heading">Get updates from ZOHD.</h2>
+          <p>Sign up for product news and practical oral-care tips.</p>
+        </div>
+      </div>
+      <form class="newsletter-form" id="newsletter-form" onsubmit="subscribeToNewsletter(event)">
+        <label class="visually-hidden" for="newsletter-email">Email address</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="Enter your email address" autocomplete="email" maxlength="254" required />
+        <label class="newsletter-consent">
+          <input type="checkbox" id="newsletter-consent" required />
+          <span>I agree to receive product updates from ZOHD. To unsubscribe, contact <a href="mailto:zakiinitiatives@gmail.com">zakiinitiatives@gmail.com</a>.</span>
+        </label>
+        <button class="btn btn-primary" type="submit">Subscribe <i class="fa-solid fa-arrow-right"></i></button>
+        <p class="newsletter-status" id="newsletter-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <div class="home-social">
+      <div>
+        <span class="home-eyebrow">Stay connected</span>
+        <h2>Follow along with ZOHD.</h2>
+        <p>Find us on Instagram for updates from the House of Sustainables.</p>
+      </div>
+      <a class="btn btn-primary" href="https://www.instagram.com/zohd_hos/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> @zohd_hos</a>
+    </div>
+  </section>
+
+  <!-- SHOP CATALOG SECTION -->
+  <section id="shop-section" class="page-section">
+    <div class="section-title">
+      <h2>Natural Oral Care Collection</h2>
+      <p>Bamboo and neem toothbrushes, family packs, and everyday essentials</p>
+    </div>
+    <div class="product-search">
+      <label for="product-search">Search the collection</label>
+      <div class="product-search-control">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="product-search" placeholder="Try “kids”, “bamboo”, or “neem”" oninput="filterProducts(this.value)" autocomplete="off" />
+        <button type="button" class="search-clear-btn" onclick="clearProductSearch()" aria-label="Clear product search">&times;</button>
+      </div>
+      <p id="product-search-status" class="product-search-status" role="status" aria-live="polite"></p>
+    </div>
+    <div class="product-grid" id="product-grid-container"></div>
+  </section>
+
+  <div id="product-detail-modal" class="product-detail-overlay" onclick="if(event.target === this) closeProductDetails()" aria-hidden="true">
+    <section class="product-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="product-detail-heading">
+      <button type="button" class="product-detail-close" onclick="closeProductDetails()" aria-label="Close product details">&times;</button>
+      <div class="product-detail-content"></div>
+    </section>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <section id="about-section" class="page-section">
+    <div class="about-hero">
+      <div class="about-hero-content">
+        <span class="badge-pill">House of Sustainables</span>
+        <h1>Thoughtful oral care for everyday routines.</h1>
+        <p>ZOHD brings together bamboo and neem oral-care essentials, family-friendly toothbrush options, and thoughtful everyday goods.</p>
+      </div>
+    </div>
+
+    <div class="about-story">
+      <article class="about-story-copy">
+        <h2>Small swaps, part of everyday care</h2>
+        <p>Toothbrushes are part of a daily routine. ZOHD offers options with bamboo and neem handles as alternatives to conventional plastic-handled brushes.</p>
+        <p>The collection includes kids’ and family bamboo packs, neem toothbrushes for adults and kids, a toothbrush and tongue-cleaner combo, and a seed notebook for everyday notes.</p>
+      </article>
+      <aside class="about-promise">
+        <span class="about-promise-mark"><i class="fa-solid fa-seedling"></i></span>
+        <h2>What matters to us</h2>
+        <p>We focus on useful everyday products, clear product details, and natural materials in our oral-care range. We want more mindful choices to feel approachable for individuals and families.</p>
+      </aside>
+    </div>
+
+    <div class="about-values-heading">
+      <h2>Designed around daily routines</h2>
+      <p>Simple oral-care essentials for different ages and the people who share a home.</p>
+    </div>
+    <div class="about-values-grid">
+      <article class="about-value-card">
+        <i class="fa-solid fa-leaf"></i>
+        <h3>Bamboo and neem handles</h3>
+        <p>Choose from toothbrushes with bamboo or neem wood handles across the current collection.</p>
+      </article>
+      <article class="about-value-card">
+        <i class="fa-solid fa-face-smile"></i>
+        <h3>Options for kids and adults</h3>
+        <p>From a kids’ toothbrush pack to a family combo, the collection is made to support everyday brushing across ages.</p>
+      </article>
+      <article class="about-value-card">
+        <i class="fa-solid fa-tooth"></i>
+        <h3>Comfortable brushing</h3>
+        <p>Soft bristles for adults and extra-soft bristles for kids help make daily brushing feel comfortable and familiar.</p>
+      </article>
+    </div>
+
+    <div class="about-cta">
+      <div>
+        <h2>Find an essential for your routine.</h2>
+        <p>Explore bamboo and neem oral care, family packs, and everyday essentials.</p>
+      </div>
+      <div class="about-cta-actions">
+        <button class="btn btn-primary" onclick="showSection('shop-section')">Explore the collection <i class="fa-solid fa-arrow-right"></i></button>
+        <a class="about-social-link" href="https://www.instagram.com/zohd_hos/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> @zohd_hos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOPPING BAG DRAWER -->
+  <div id="cart-overlay" class="cart-overlay" onclick="toggleCart(false)"></div>
+  <div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping"></i> Shopping Bag</h3>
+      <button class="close-drawer-btn" onclick="toggleCart(false)">&times;</button>
+    </div>
+    <div class="cart-items-body" id="cart-items-container"></div>
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal:</span>
+        <span id="cart-subtotal">₹0</span>
+      </div>
+      <p style="font-size:0.82rem; color:var(--text-light); margin-bottom:1.2rem;">
+        <i class="fa-solid fa-truck-fast"></i> Sign in before checkout to include your saved delivery address and location in your WhatsApp order.
+      </p>
+      <button class="btn btn-whatsapp full-width" onclick="checkoutViaWhatsApp()">
+        <i class="fa-brands fa-whatsapp"></i> Place Order on WhatsApp
+      </button>
+    </div>
+  </div>
+
+  <!-- AUTH POPUP MODAL -->
+  <div id="auth-modal" class="modal-overlay">
+    <div class="modal-body">
+      <button style="position:absolute; top:1.2rem; right:1.2rem; background:none; border:none; font-size:1.6rem; cursor:pointer;" onclick="closeModal('auth-modal')">&times;</button>
+      
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" id="tab-login-btn" onclick="switchAuthMode('login')">Sign In</button>
+        <button class="auth-tab-btn" id="tab-register-btn" onclick="switchAuthMode('register')">Create Account</button>
+      </div>
+
+      <div id="customer-account-summary" class="hidden">
+        <h3 id="customer-account-name" style="margin-bottom:0.5rem; color:var(--primary-green);"></h3>
+        <p id="customer-account-identifier" style="margin-bottom:1.2rem; color:var(--text-light);"></p>
+        <button type="button" class="btn btn-outline full-width" onclick="logoutCustomer()">Sign out</button>
+        <p id="customer-logout-error" role="alert" aria-live="polite" style="color:#b42318;"></p>
+      </div>
+
+      <div id="admin-login-container" class="hidden">
+        <h3 style="margin-bottom:0.5rem; color:var(--primary-green);">Admin sign in</h3>
+        <p style="margin-bottom:1.2rem; color:var(--text-light); font-size:0.88rem;">Sign in with your administrator ID and password.</p>
+        <form id="main-admin-login-form">
+          <div class="form-group">
+            <label for="main-admin-id">Admin ID</label>
+            <input type="text" id="main-admin-id" autocomplete="username" required />
+          </div>
+          <div class="form-group">
+            <label for="main-admin-password">Password</label>
+            <input type="password" id="main-admin-password" autocomplete="current-password" required />
+          </div>
+          <button id="main-admin-submit" type="submit" class="btn btn-primary full-width">Sign in to Admin</button>
+          <p id="main-admin-error" role="alert" aria-live="polite" style="min-height:1.4rem; margin:0.8rem 0 0; color:#b42318; font-size:0.88rem;"></p>
+        </form>
+        <button type="button" class="btn btn-outline full-width" onclick="showCustomerSignIn()" style="margin-top:0.5rem;">Back to customer sign in</button>
+      </div>
+
+      <div id="login-form-container">
+        <form onsubmit="handleCustomerAuth(event, 'login')">
+          <div class="form-group">
+            <label for="login-id">Mobile Number or Email</label>
+            <input type="text" id="login-id" placeholder="Phone (+91) or Email address" autocomplete="username" required />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="••••••••" autocomplete="current-password" required />
+          </div>
+          <button type="submit" class="btn btn-primary full-width">Sign In</button>
+          <p id="customer-login-error" role="alert" aria-live="polite" style="min-height:1.4rem; margin:0.8rem 0 0; color:#b42318; font-size:0.88rem;"></p>
+        </form>
+      </div>
+
+      <div id="register-form-container" class="hidden">
+        <form onsubmit="handleCustomerAuth(event, 'register')">
+          <div class="form-group">
+            <label for="reg-name">Full Name <span class="required-mark" aria-label="required">*</span></label>
+            <input type="text" id="reg-name" placeholder="Enter full name" autocomplete="name" required />
+          </div>
+          <div class="form-group">
+            <label for="reg-identifier">Mobile Number or Email <span class="required-mark" aria-label="required">*</span></label>
+            <input type="text" id="reg-identifier" placeholder="Phone (+91) or Email address" autocomplete="username" required />
+          </div>
+          <div class="form-group">
+            <label for="reg-address">Delivery Address <span class="required-mark" aria-label="required">*</span></label>
+            <textarea id="reg-address" rows="3" placeholder="House/building, street, and landmark" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="reg-location">Delivery Location <span class="required-mark" aria-label="required">*</span></label>
+            <input type="text" id="reg-location" placeholder="Area, city, state, and PIN code" autocomplete="postal-code" required />
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Create Password <span class="required-mark" aria-label="required">*</span></label>
+            <input type="password" id="reg-password" placeholder="At least 8 characters" autocomplete="new-password" minlength="8" required />
+          </div>
+          <div class="form-group">
+            <label for="reg-confirm-password">Re-enter Password <span class="required-mark" aria-label="required">*</span></label>
+            <input type="password" id="reg-confirm-password" placeholder="Re-enter your password" autocomplete="new-password" minlength="8" required />
+          </div>
+          <button type="submit" class="btn btn-primary full-width">Create Account</button>
+          <p id="customer-register-error" role="alert" aria-live="polite" style="min-height:1.4rem; margin:0.8rem 0 0; color:#b42318; font-size:0.88rem;"></p>
+        </form>
+        <button type="button" class="auth-switch-btn" onclick="switchAuthMode('login')">Already have an account? Sign in</button>
+      </div>
+
+      <!-- CENTERED GUEST BUTTON -->
+      <div class="guest-divider-wrapper">
+        <button class="btn btn-guest-middle full-width" onclick="continueAsGuest()">
+          <i class="fa-solid fa-user-clock"></i> Continue as Guest
+        </button>
+        <div class="divider-line"><span class="login-divider-label">OR</span></div>
+      </div>
+      <button id="customer-admin-signin" type="button" class="btn btn-outline full-width customer-admin-signin" onclick="showAdminSignIn()">Admin sign in</button>
+    </div>
+  </div>
+
+  <!-- FLOATING HELP BUTTON -->
+  <a href="https://wa.me/918655903153?text=Hi%20ZOHD%20Team,%20I%20need%20assistance" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" aria-label="Contact ZOHD on WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>ZOHD</h3>
+        <p>House of Sustainables. Thoughtful oral care and everyday essentials for the whole family.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <p><a href="#home-section" onclick="event.preventDefault(); showSection('home-section')">Home</a></p>
+        <p><a href="#shop-section" onclick="event.preventDefault(); showSection('shop-section')">Shop All</a></p>
+        <p><a href="#materials-comparison" onclick="event.preventDefault(); showMaterialsComparison()">Our Materials</a></p>
+        <p><a href="#about-section" onclick="event.preventDefault(); showSection('about-section')">About Us</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Direct Contact & Orders</h4>
+        <p><i class="fa-solid fa-envelope"></i> zakiinitiatives@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+918655903153">+91 86559 03153</a></p>
+        <p><i class="fa-regular fa-clock"></i> Mon–Sat, 10am–6pm IST</p>
+        <p><a href="https://www.instagram.com/zohd_hos/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Follow us on Instagram: @zohd_hos</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Office Address</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Ground Floor, Mehta Building, Calicut Rd, Ballard Estate, Fort, Mumbai, Maharashtra 400001</p>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Ground%20Floor%2C%20Mehta%20Building%2C%20Calicut%20Rd%2C%20Ballard%20Estate%2C%20Fort%2C%20Mumbai%2C%20Maharashtra%20400001" target="_blank" rel="noopener noreferrer">View on map <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+        <iframe class="office-map" title="Map showing the ZOHD office location" src="https://www.google.com/maps?q=Ground%20Floor%2C%20Mehta%20Building%2C%20Calicut%20Rd%2C%20Ballard%20Estate%2C%20Fort%2C%20Mumbai%2C%20Maharashtra%20400001&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ZOHD - House of Sustainables. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/index.js" defer></script>
+</body>
+</html>

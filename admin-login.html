@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login | ZOHD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: #1e2421;
+      background: #fcfbfa;
+      --green: #1c3b2b;
+      --border: #e5dec9;
+    }
+
+    * { box-sizing: border-box; }
+    body { min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 1.5rem; }
+    main { width: min(100%, 430px); padding: 2.5rem; border: 1px solid var(--border); border-radius: 16px; background: white; box-shadow: 0 15px 35px rgba(28, 59, 43, 0.1); }
+    h1 { margin: 0 0 0.5rem; color: var(--green); font-size: 1.7rem; }
+    p { margin: 0 0 1.5rem; color: #626d66; }
+    label { display: block; margin: 1rem 0 0.4rem; font-weight: 700; font-size: 0.9rem; }
+    input { width: 100%; padding: 0.85rem; border: 1px solid var(--border); border-radius: 10px; font: inherit; }
+    input:focus { outline: 2px solid rgba(28, 59, 43, 0.25); border-color: var(--green); }
+    button { width: 100%; margin-top: 1rem; padding: 0.9rem; border: 0; border-radius: 30px; background: var(--green); color: white; font: inherit; font-weight: 700; cursor: pointer; }
+    button:disabled { opacity: 0.7; cursor: wait; }
+    #login-error { margin-top: 0.35rem; color: #b42318; font-size: 0.9rem; }
+    a { color: var(--green); }
+    main > a { display: inline-block; margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Admin sign in</h1>
+    <p>Sign in with your administrator credentials to continue.</p>
+    <form id="admin-login-form">
+      <label for="admin-id">Admin ID</label>
+      <input id="admin-id" name="adminId" autocomplete="username" required />
+      <label for="admin-password">Password</label>
+      <input id="admin-password" name="password" type="password" autocomplete="current-password" required />
+      <button id="submit-button" type="submit">Sign in</button>
+      <div id="login-error" role="alert" aria-live="polite"></div>
+    </form>
+    <a href="/index.html">Back to store</a>
+  </main>
+  <script>
+    document.getElementById("admin-login-form").addEventListener("submit", async event => {
+      event.preventDefault();
+      const button = document.getElementById("submit-button");
+      const error = document.getElementById("login-error");
+      button.disabled = true;
+      error.textContent = "";
+
+      try {
+        const response = await fetch("/admin/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "same-origin",
+          body: JSON.stringify({
+            adminId: document.getElementById("admin-id").value,
+            password: document.getElementById("admin-password").value
+          })
+        });
+        if (response.ok) {
+          window.location.replace("/admin/dashboard");
+          return;
+        }
+        if (response.status === 429) {
+          error.textContent = "Too many attempts. Please wait before trying again.";
+        } else {
+          error.textContent = "Invalid admin ID or password.";
+        }
+      } catch {
+        error.textContent = window.location.protocol === "file:"
+          ? "Open the admin page through the app server, not as a file. Start the server with `npm start`, then visit http://127.0.0.1:3000/admin."
+          : "Unable to contact the login service. Make sure the app server is running, then try again.";
+      } finally {
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

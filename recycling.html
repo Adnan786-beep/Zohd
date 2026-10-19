@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recycling - ZOHD</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ZOHD home">
+        <img src="/images/zohd-mark.png" alt="ZOHD logo mark" class="brand-logo-image" />
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop Catalog</a>
+        <a href="recycling.html" class="active">Recycling & Trade-In</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn cart-btn" onclick="toggleCart()"><i class="fa-solid fa-bag-shopping"></i> <span class="cart-badge" id="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <h2>Electric & Manual Toothbrush Recycling Program</h2>
+    <p style="margin-bottom:2rem;">Send us your old electric toothbrush heads or worn bamboo handles for eco-friendly recycling.</p>
+
+    <div style="background:white; padding:2rem; border-radius:var(--radius); border:1px solid var(--border-color); max-width:600px;">
+      <h3>Request Trade-In Pickup</h3>
+      <form onsubmit="event.preventDefault(); checkoutViaWhatsApp();">
+        <div class="form-group"><label>Full Name</label><input type="text" required /></div>
+        <div class="form-group"><label>Item Type</label><select><option>Electric Toothbrush Heads</option><option>Bamboo Handles</option></select></div>
+        <button type="submit" class="btn btn-whatsapp full-width"><i class="fa-brands fa-whatsapp"></i> Submit Request via WhatsApp</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
