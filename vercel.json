@@ -2,20 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "outputDirectory": "public",
-  "functions": {
-    "api/*.js": {
-      "includeFiles": "{private/admin.html,private/admin-login.html,data/products.json}"
-    },
-    "api/*/*.js": {
-      "includeFiles": "{private/admin.html,private/admin-login.html,data/products.json}"
-    },
-    "api/*/*/*.js": {
-      "includeFiles": "{private/admin.html,private/admin-login.html,data/products.json}"
-    },
-    "api/*/*/*/*.js": {
-      "includeFiles": "{private/admin.html,private/admin-login.html,data/products.json}"
-    }
-  },
+  
   "rewrites": [
     { "source": "/admin", "destination": "/api/admin" },
     { "source": "/admin/login", "destination": "/api/admin/login" },
